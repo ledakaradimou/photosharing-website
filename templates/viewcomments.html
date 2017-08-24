@@ -1,0 +1,23 @@
+{% if phcommts %}
+<h2>Comments and user ids of those posted the comment for the photo_id you queried:</h2>
+    <ul>
+    {% for l in phcommts %}
+        <li>{{l[0],l[1]}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+
+<head>
+    <title>Select a photo to view the comments of!</title>
+</head>
+
+<form method="post" action="/viewcomments">
+                <label for="picture_id">Select photo by id:</label>
+                <input type="text" name="picture_id" required='true' /><br />
+                <input type="submit" />
+            </form>
+

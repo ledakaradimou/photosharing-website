@@ -1,0 +1,20 @@
+<head>
+    <title>Delete a Photo!</title>
+</head>
+{% if phts %}
+<h2>your photos</h2>
+    <ul>
+    {% for photo in phts %}
+        <li>{{photo[0]}}></li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+
+<form method="post" action="/deletephoto">
+				<label for="picture_id"> Select a photo:</label>
+                <input for="text" name="picture_id" required='true'/> <br />
+
+             </form>

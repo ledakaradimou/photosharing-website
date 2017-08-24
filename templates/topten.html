@@ -1,0 +1,14 @@
+<head>
+    <title>List of contributors and contributions!</title>
+</head>
+<div class="title">
+            <h1>These are the top ten contributors!</h1>
+        </div>
+{% if contributions %}
+<h2>contributions by last name of contributor</h2>
+    <ul>
+    {% for contribution in contributions %}
+        <li>{{contribution[0], contribution[1]}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}

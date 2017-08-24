@@ -1,0 +1,12 @@
+<form method="post" action="/tag_suggestion">
+                <label for="t1"><b>Enter your first tag:</b></label>
+                <input type="t1" name="t1" /><br />
+                <label for="t2"><b>Enter your first tag:</b></label>
+                <input type="t2" name="t2" /><br />
+                <input type="submit" />
+            </form>
+{% if m %}
+{% for k in m  %}
+<li>< '{{k[0]}},{{k[1]}}'></li>
+{% endfor %}
+{% endif %}

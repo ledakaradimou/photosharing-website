@@ -1,0 +1,25 @@
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+{% if popular %}
+<h2>Tags:</h2>
+    <ul>
+    {% for p in popular %}
+        <li>{{p[0],p[1]}}</li>
+    {% endfor %}
+
+    <ul>
+    {% for p in popular  %}
+              
+             <form method="post" action="/viewatag">    
+                <input type="hidden" value={{p[0]}} name="text" required='true' /><br />
+                <input type="submit" value={{p[0]}} />
+         
+            </form>
+   
+
+    {% endfor %}
+    </ul>
+
+    </ul>
+{% endif %}

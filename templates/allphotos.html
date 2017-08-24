@@ -1,0 +1,24 @@
+<!doctype html>
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+
+{% if photos %}
+<h2>Photos</h2>
+    <ul>
+    {% for photo in photos  %}
+        <li><img src='data:image/png;base64, {{photo[0]}}'></li>
+        <ul>
+        		<li>{{photo[1]}}</li>
+        		<li>{{photo[2]}}</li>
+        		<li>{{photo[3]}}</li>
+        	</ul>
+             <form method="post" enctype="multipart/form-data" action="/viewbyalbum">    
+                <input type="hidden" value={{photo[2]}} name="album" required='true' /><br />
+                <input type="submit" value={{photo[2]}} />
+            </form>
+
+
+    {% endfor %}
+    </ul>
+{% endif %}

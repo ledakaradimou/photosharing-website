@@ -1,0 +1,16 @@
+<!doctype html>
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+<head>
+<title>Add a tag!</title>
+</head>
+
+<form method="post" action="/addtag">
+				<label for="picture_id">Select photo by id:</label>
+                <input type="text" name="picture_id" required='true' /><br />
+				<label for="text"> Write your tag</label>
+                <input for="text" name="text" required='true'/> <br />
+                <input type="submit" />
+
+             </form>

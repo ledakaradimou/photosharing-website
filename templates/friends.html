@@ -1,0 +1,21 @@
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+<head>
+    <title>List of friends!</title>
+</head>
+<div class="title">
+            <h1>These are all the friends you have</h1>
+        </div>
+{% if friends %}
+<h2>your friends</h2>
+    <ul>
+    {% for friend in friends %}
+        <li>{{friend[0]}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+<body>
+        <div class="title">
+            <h1>maybe you would like to add more?</h1>
+        </div>

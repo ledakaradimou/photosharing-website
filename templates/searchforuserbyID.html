@@ -1,0 +1,18 @@
+<!doctype html>
+{% if friendsearchmessage %}
+  <h4>{{friendsearchmessage}}!</h4>
+{% endif %}
+{% if people %}
+<ul>
+    {% for p in people %}
+        <li>{{p[0]}}</li>
+    {% endfor %}
+    </ul>
+
+
+{% endif %}
+<form method="post" action="/searchforuserbyID">
+				<label for="user_id">Search friends by user_id</label>
+                <input type="text" name="user_id" required='true' /><br />
+                <input type="submit" />
+                </form>

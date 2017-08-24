@@ -1,0 +1,9 @@
+<!doctype html>
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+<form method="post" action="/likePhoto">
+                <label for="picture_id">Select a photo to like by id:</label>
+                <input type="text" name="picture_id" required='true' /><br />
+                <input type="submit" />
+            </form>

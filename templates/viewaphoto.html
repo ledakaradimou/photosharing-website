@@ -1,0 +1,34 @@
+<!doctype html>
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+<form method="post" action="/viewaphoto">
+				<label for="picture_id">Select photo by id:</label>
+                <input type="text" name="picture_id" required='true' /><br />
+                <input type="submit" />
+                </form>
+
+{% if photo %}
+{% for p in photo  %}
+        <li><img src='data:image/png;base64, {{p[0]}}'></li>
+        
+        <ul>
+{% endfor %}
+    </ul>
+{% endif %}
+
+{% if tags %}
+<h2>TAGS</h2>
+    <ul>
+    {% for tag in tags  %}
+              
+             <form method="post" action="/viewatag">    
+                <input type="hidden" value={{tag[0]}} name="text" required='true' /><br />
+                <input type="submit" value={{tag[0]}} />
+         
+            </form>
+   
+
+    {% endfor %}
+    </ul>
+{% endif %}

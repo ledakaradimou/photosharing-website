@@ -1,0 +1,20 @@
+<head>
+    <title>Delete an Album!!</title>
+</head>
+{% if albs %}
+<h2>your albums</h2>
+    <ul>
+    {% for album in albs %}
+        <li>{{album[0]}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+
+<form method="post" action="/deletealbum">
+				<label for="album_id"> Select an album by id:</label>
+                <input for="text" name="album_id" required='true'/> <br />
+
+             </form>

@@ -1,0 +1,13 @@
+<form method="post" action="/photosearch">
+                <label for="searchentry"><b>Enter the tags with space in between:</b></label>
+                <input type="searchentry" name="searchentry" /><br />  </form>
+
+{% if t %}
+<h2>Here are the picture ids that are associated with the tags you entered</h2>
+    <ul>
+    {% for z in t %}
+        <li>{{z[0]}}</li>
+       
+    {% endfor %}
+    </ul>
+{% endif %}

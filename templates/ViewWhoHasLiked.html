@@ -1,0 +1,20 @@
+<!doctype html>
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+{% if number %}
+  <h4>{{number}}!</h4>
+{% endif %}
+{% if likes %}
+<h2>Likes</h2>
+    <ul>
+    {% for l in likes %}
+        <li>{{l[0]}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+<form method="post" action="/ViewWhoHasLiked">
+                <label for="picture_id">Select a photo to see likes by id:</label>
+                <input type="text" name="picture_id" required='true' /><br />
+                <input type="submit" />
+            </form>

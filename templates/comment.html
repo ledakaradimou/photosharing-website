@@ -1,0 +1,16 @@
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+<head>
+    <title>Comment on a photo!</title>
+</head>
+<body>
+</div>
+<form method="post" action="/comment">
+                <label for="picture_id">Select photo by id:</label>
+                <input type="text" name="phts_id" required='true' /><br />
+                <label for="text"> Write your comment:</label>
+                <input for="text" name="text" required='true'/> <br />
+                <input type="submit" value="Comment" />
+            </form>
+    </body>
